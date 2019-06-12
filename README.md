@@ -46,9 +46,13 @@ You can use the foreach command to execute any shell script in from the root of 
 # Further reading
 
 [github](http://github.com/) - free git hosting for open source projects
+
 [GitCasts screencast on git submodules](http://blip.tv/file/4218925)
+
 [Pathogen.vim](http://www.vim.org/scripts/script.php?script_id=2332) - allows Vim plugins to be installed as bundles
+
 [Fugitive.vim](https://github.com/tpope/vim-fugitive) - a git wrapper for Vim
+
 [git-submodule(1) Manual Page](http://www.kernel.org/pub/software/scm/git/docs/v1.7.5.4/git-submodule.html)
 
 # Updates
