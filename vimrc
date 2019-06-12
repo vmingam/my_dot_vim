@@ -119,3 +119,6 @@ noremap <silent> <F8> :ToggleSlash<CR>
 " Copy current file path
 command! Copyfile let @*=substitute(expand("%:p"), '/', '\', 'g')
 :map <Leader>cf :Copyfile<CR>
+
+" Option for vim-markdown
+        let g:vim_markdown_folding_disabled = 1
