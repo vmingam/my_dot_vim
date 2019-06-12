@@ -30,8 +30,8 @@ set laststatus=2
 
 "------------------shortcuts--------------------BEGIN
 
-nmap <C-n> :bn<CR>
-nmap <C-p> :bp<CR>
+"nmap <C-n> :bn<CR>
+"nmap <C-p> :bp<CR>
 
 "------------------shortcuts--------------------BEGIN
 
