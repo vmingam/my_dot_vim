@@ -25,7 +25,7 @@ Once your vim configuration is under version control, it’s quite straightforwa
 
 ```shell
 cd ~
-git clone http://github.com/username/dotvim.git ~/.vim
+git clone git@gitlab.com:vmingam/dot_vim_files.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 ln -s ~/.vim/gvimrc ~/.gvimrc
 cd ~/.vim
