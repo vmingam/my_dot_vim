@@ -72,8 +72,8 @@ let g:syntastic_check_on_wq = 0
 
 set mouse=a
 "
-"colorscheme Tomorrow-Night
-colorscheme gruvbox
+colorscheme Tomorrow-Night
+"colorscheme gruvbox
 set bg=dark
 set number " Ajoute les numéros de ligne
 
