@@ -72,13 +72,14 @@ let g:syntastic_check_on_wq = 0
 
 set mouse=a
 "
-colorscheme Tomorrow-Night
-"colorscheme gruvbox
+"colorscheme Tomorrow-Night
+colorscheme gruvbox
 set bg=dark
 set number " Ajoute les numéros de ligne
 
 map é ~
 " remplace la touche tilde par la touche é afin de changer la casse
+map <C-F3> *
 
 set cursorline "active la mise en évidence de la ligne active
 set expandtab "transforme les tabulations en espace
@@ -86,15 +87,16 @@ set encoding=utf-8 "encode le fichier courant en utf-8
 set fileencoding=utf-8 "encode le fichier courant en utf-8 au moment de l'enregistrement
 
 "set guifont=Lucida_Console:h10
-set guifont=Consolas:h10
+set guifont=Consolas:h11
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
 :set guioptions-=L  "remove left-hand scroll bar
 ":set lines=999 columns=999
 set hlsearch "met en surbrillance les résultats de recherche
+set incsearch "active la recherche incrémentale par défaut
 let mapleader=" " "ajoute une touche principale dans le but d'éviter les conflits
-map <leader>s :source ~/.vim/vimrc<CR>
+map <leader>s :source ~/vimfiles/vimrc<CR>
 nnoremap <Leader><Leader> :e#<CR>
 autocmd BufWritePre * :%s/\s\+$//e "supprime les espaces inutile à la fin de chaque ligne
 
