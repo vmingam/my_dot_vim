@@ -22,3 +22,6 @@
 [submodule "bundle/plaintasks"]
 	path = bundle/plaintasks
 	url = https://github.com/elentok/plaintasks.vim.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = http://github.com/tpope/vim-fugitive.git
