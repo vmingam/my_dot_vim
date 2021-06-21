@@ -34,3 +34,6 @@
 [submodule "bundle/js-beautify"]
 	path = bundle/js-beautify
 	url = https://github.com/beautify-web/js-beautify
+[submodule "bundle/vim-evokai"]
+	path = bundle/vim-evokai
+	url = https://github.com/amadeus/vim-evokai
