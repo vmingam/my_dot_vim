@@ -6,14 +6,6 @@ set wildmenu
 " Option for Ctrlp.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 "
-" Activation NASTRAN files syntax
-autocmd BufNewFile,BufRead *.bdf set syntax=nastran
-autocmd BufNewFile,BufRead *.ecd set syntax=nastran
-autocmd BufNewFile,BufRead *.dat set syntax=nastran
-autocmd BufNewFile,BufRead *.nas set syntax=nastran
-autocmd BufNewFile,BufRead *.axs set syntax=nastran
-autocmd BufNewFile,BufRead *.stm set syntax=nastran
-autocmd BufNewFile,BufRead *.ses set syntax=tcl
 "-------------vim-airline options--------END
 "let g:airline#extensions#tabline#enabled = 1
 "-------------vim-airline options--------END
@@ -82,7 +74,16 @@ map é ~
 map <C-F3> *
 
 set cursorline "active la mise en évidence de la ligne active
+set tabstop=4 softtabstop=4
+set shiftwidth=4
 set expandtab "transforme les tabulations en espace
+set smartcase
+set smartindent
+
+set noswapfile
+set undodir=~/.vim/undodir
+set undofile
+
 set encoding=utf-8 "encode le fichier courant en utf-8
 set fileencoding=utf-8 "encode le fichier courant en utf-8 au moment de l'enregistrement
 
