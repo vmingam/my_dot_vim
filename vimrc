@@ -88,15 +88,15 @@ set fileencoding=utf-8 "encode le fichier courant en utf-8 au moment de l'enregi
 
 "set guifont=Lucida_Console:h10
 set guifont=Consolas:h11
-:set guioptions-=m  "remove menu bar
-:set guioptions-=T  "remove toolbar
+":set guioptions-=m  "remove menu bar
+":set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
 :set guioptions-=L  "remove left-hand scroll bar
 ":set lines=999 columns=999
 set hlsearch "met en surbrillance les résultats de recherche
 set incsearch "active la recherche incrémentale par défaut
 let mapleader=" " "ajoute une touche principale dans le but d'éviter les conflits
-map <leader>s :source ~/vimfiles/vimrc<CR>
+map <leader>s :source ~/.vim/vimrc<CR>
 nnoremap <Leader><Leader> :e#<CR>
 autocmd BufWritePre * :%s/\s\+$//e "supprime les espaces inutile à la fin de chaque ligne
 
