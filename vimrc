@@ -25,15 +25,15 @@ set laststatus=2
 
 "------------------shortcuts--------------------BEGIN
 
-"nmap <C-n> :bn<CR>
-"nmap <C-p> :bp<CR>
+nmap <C-PageDown> :bn<CR>
+nmap <C-PageUp> :bp<CR>
 
 "------------------shortcuts--------------------BEGIN
 
 "-------------NERDTree command and option -----------------BEGIN
 " Locate the focused file in the tree with <Leader> + t:
 nmap <leader>t :NERDTreeFind<CR>
-nmap <C-k><C-b> :NERDTreeToggle<CR>
+nmap <C-b> :NERDTreeToggle<CR>
 "-------------NERDTree command and option -----------------END
 
 " ---------Options for vim-multiple-cursors---BEGIN
@@ -70,7 +70,13 @@ set mouse=a
 "colorscheme Tomorrow-Night
 colorscheme gruvbox
 set bg=dark
-set number " Ajoute les numéros de ligne
+
+set number relativenumber " Ajoute les numéros de ligne
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+augroup END
 
 map é ~
 " remplace la touche tilde par la touche é afin de changer la casse
