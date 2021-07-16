@@ -15,7 +15,10 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 if !has('gui_running')
   set t_Co=256
 endif
-
+" set color of lightline
+let g:lightline = {
+            \ 'colorscheme': 'one',
+            \ }
 " for gvim on MS Windows
 set laststatus=2
 "------------ lightline options--------------END
