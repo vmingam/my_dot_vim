@@ -37,3 +37,6 @@
 [submodule "bundle/vim-evokai"]
 	path = bundle/vim-evokai
 	url = https://github.com/amadeus/vim-evokai
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
