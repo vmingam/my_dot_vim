@@ -67,8 +67,9 @@ let g:syntastic_check_on_wq = 0
 
 set mouse=a
 "
+colorscheme monokai
 "colorscheme Tomorrow-Night
-colorscheme gruvbox
+"colorscheme gruvbox
 set bg=dark
 
 set number relativenumber " Ajoute les numéros de ligne
