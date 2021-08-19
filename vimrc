@@ -4,9 +4,12 @@ filetype plugin indent on
 set omnifunc=javascriptcomplete#CompleteJS
 set path+=**
 set wildmenu
-" Option for Ctrlp.vim
+"-------- Settings for Ctrlp.vim (https://github.com/ctrlpvim/ctrlp.vim)
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-"
+let g:ctrlp_working_path_mode = 'ra'
+" 'c' - the directory of the current file.
+" 'a' - the directory of the current file, unless it is a subdirectory of the cwd
+" 'r' - the nearest ancestor of the current file that contains one of these directories or files: .git .hg .svn
 "-------------vim-airline options--------END
 "let g:airline#extensions#tabline#enabled = 1
 "-------------vim-airline options--------END
