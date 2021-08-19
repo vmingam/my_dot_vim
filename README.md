@@ -60,6 +60,25 @@ You can use the foreach command to execute any shell script in from the root of 
 git submodule foreach git pull origin master
 ```
 
+## Removing a submodule
+
+Follow this 3 steps to remove a bundle as submodule
+
+```shell
+git submodule deinit ~/.vim/bundle/fugitive
+```
+
+```shell
+rmdir ~/.vim/bundle/fugitive
+```
+
+and remove the 3 lines concerning the freshly removed submodule in `.gitmodules` file.
+
+```
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = http://github.com/tpope/vim-fugitive.git
+```
 
 ## Further reading
 
