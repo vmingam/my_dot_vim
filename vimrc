@@ -1,6 +1,7 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+set omnifunc=javascriptcomplete#CompleteJS
 set path+=**
 set wildmenu
 " Option for Ctrlp.vim
@@ -65,27 +66,26 @@ let g:syntastic_check_on_wq = 0
 
 "----------------- Miscellaneous personal options------------------
 
-set mouse=a
+set mouse=a "active la souris par défaut
 "
 colorscheme monokai
 "colorscheme Tomorrow-Night
 "colorscheme gruvbox
 set bg=dark
 
-set number relativenumber " Ajoute les numéros de ligne
+set number relativenumber " Ajoute les numéros de ligne relatifs
+" les réglages suivants active relativenumber sur le buffer actif
 augroup numbertoggle
     autocmd!
     autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
 augroup END
 
-map é ~
-" remplace la touche tilde par la touche é afin de changer la casse
-map <C-F3> *
+map é ~" remplace la touche tilde par la touche é afin de changer la casse
 
 set cursorline "active la mise en évidence de la ligne active
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set expandtab "transforme les tabulations en espace
 set smartcase
 set smartindent
@@ -97,41 +97,37 @@ set undofile
 set encoding=utf-8 "encode le fichier courant en utf-8
 set fileencoding=utf-8 "encode le fichier courant en utf-8 au moment de l'enregistrement
 
-"set guifont=Lucida_Console:h10
-set guifont=Consolas:h11
-":set guioptions-=m  "remove menu bar
-":set guioptions-=T  "remove toolbar
+":set guioptions-=m  "remove menu bar of gvim
+":set guioptions-=T  "remove toolbar of gvim
 :set guioptions-=r  "remove right-hand scroll bar
 :set guioptions-=L  "remove left-hand scroll bar
-":set lines=999 columns=999
 set hlsearch "met en surbrillance les résultats de recherche
 set incsearch "active la recherche incrémentale par défaut
-let mapleader=" " "ajoute une touche principale dans le but d'éviter les conflits
-map <leader>s :source ~/.vim/vimrc<CR>
-nnoremap <Leader><Leader> :e#<CR>
-autocmd BufWritePre * :%s/\s\+$//e "supprime les espaces inutile à la fin de chaque ligne
+let mapleader=" " "ajoute la barre d'espace comme touche leader dans le but d'éviter les conflits
+map <leader>s :source ~/.vim/vimrc<CR> " recharge vimrc pour l'appliquer à la session vim active
+nnoremap <Leader><Leader> :e#<CR>  " bascule sur le dernier buffer affiché
+autocmd BufWritePre * :%s/\s\+$//e "supprime les espaces inutiles à la fin de chaque ligne
 
-" Toggle slash and/or backslah in the current line or selected lines
-function! ToggleSlash(independent) range
-  let from = ''
-  for lnum in range(a:firstline, a:lastline)
-    let line = getline(lnum)
-    let first = matchstr(line, '[/\\]')
-    if !empty(first)
-      if a:independent || empty(from)
-        let from = first
-      endif
-      let opposite = (from == '/' ? '\' : '/')
-      call setline(lnum, substitute(line, from, opposite, 'g'))
-    endif
-  endfor
-endfunction
-command! -bang -range ToggleSlash <line1>,<line2>call ToggleSlash(<bang>1)
-noremap <silent> <F8> :ToggleSlash<CR>
-
-" Copy current file path
-command! Copyfile let @*=substitute(expand("%:p"), '/', '\', 'g')
-:map <Leader>cf :Copyfile<CR>
-
+" -------------------------------------------
 " Option for vim-markdown
-        let g:vim_markdown_folding_disabled = 1
+" -------------------------------------------
+let g:vim_markdown_folding_disabled = 1
+
+" -------------------------------------------
+" Option for ALE (Asynchronous Lint Engine)
+" -------------------------------------------
+"let g:ale_sign_error = '✘'
+"let g:ale_sign_warning = '⚠'
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+
+" -------------------------------------------
+" -------------------------------------------
+set grepprg=ack " Recherche avec ack, une alternative de grep (https://beyondgrep.com/)
+
+" -------------------------------------------
+"  NERDCommenter settings
+" -------------------------------------------
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+noremap <C-S-/> :NERDCommenterToggle<CR>
