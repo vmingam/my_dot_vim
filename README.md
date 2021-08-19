@@ -80,6 +80,8 @@ and remove the 3 lines concerning the freshly removed submodule in `.gitmodules`
 	url = http://github.com/tpope/vim-fugitive.git
 ```
 
+If something went wrong more options [here](https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule#1260982)
+
 ## Further reading
 
 [github](http://github.com/) - free git hosting for open source projects
