@@ -1,2 +1,4 @@
 undodir
 view
+plugged/
+autoload/plug.vim
