@@ -1,7 +1,6 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-set omnifunc=javascriptcomplete#CompleteJS
 set path+=**
 set wildmenu
 "-------- Settings for Ctrlp.vim (https://github.com/ctrlpvim/ctrlp.vim)
@@ -37,6 +36,7 @@ nmap <C-PageUp> :bp<CR>
 "-------------NERDTree command and option -----------------BEGIN
 " Locate the focused file in the tree with <Leader> + t:
 nmap <leader>t :NERDTreeFind<CR>
+"nmap <C-b> :Vexplore<CR>
 nmap <C-b> :NERDTreeToggle<CR>
 "-------------NERDTree command and option -----------------END
 
@@ -119,11 +119,15 @@ let g:vim_markdown_folding_disabled = 1
 " -------------------------------------------
 " Option for ALE (Asynchronous Lint Engine)
 " -------------------------------------------
-"let g:ale_sign_error = '✘'
-"let g:ale_sign_warning = '⚠'
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
 highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+" Allow ALE to run fixers to format the code in a Vim buffer
+let g:ale_fixers['javascript'] = ['eslint']
 
+" Fix files automatically on save
+let g:ale_fix_on_save = 1
 " -------------------------------------------
 " -------------------------------------------
 set grepprg=ack " Recherche avec ack, une alternative de grep (https://beyondgrep.com/)
