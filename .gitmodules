@@ -49,3 +49,6 @@
 [submodule "bundle/vim-ReplaceWithRegister"]
 	path = bundle/vim-ReplaceWithRegister
 	url = https://github.com/inkarkat/vim-ReplaceWithRegister.git
+[submodule "bundle/vim-system-copy"]
+	path = bundle/vim-system-copy
+	url = https://github.com/christoomey/vim-system-copy.git
