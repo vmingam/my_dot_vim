@@ -120,8 +120,8 @@ set undofile
 set encoding=utf-8 "encode le fichier courant en utf-8
 set fileencoding=utf-8 "encode le fichier courant en utf-8 au moment de l'enregistrement
 
-":set guioptions-=m  "remove menu bar of gvim
-":set guioptions-=T  "remove toolbar of gvim
+:set guioptions-=m  "remove menu bar of gvim
+:set guioptions-=T  "remove toolbar of gvim
 :set guioptions-=r  "remove right-hand scroll bar
 :set guioptions-=L  "remove left-hand scroll bar
 set hlsearch "met en surbrillance les résultats de recherche
