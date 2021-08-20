@@ -43,3 +43,9 @@
 [submodule "pack/tpope/start/surround"]
 	path = pack/tpope/start/surround
 	url = https://tpope.io/vim/surround.git
+[submodule "pack/tpope/start/vim-commentary"]
+	path = pack/tpope/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "bundle/vim-ReplaceWithRegister"]
+	path = bundle/vim-ReplaceWithRegister
+	url = https://github.com/inkarkat/vim-ReplaceWithRegister.git
