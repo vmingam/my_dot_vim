@@ -52,3 +52,6 @@
 [submodule "bundle/vim-system-copy"]
 	path = bundle/vim-system-copy
 	url = https://github.com/christoomey/vim-system-copy.git
+[submodule "bundle/vim-polyglot"]
+	path = bundle/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
