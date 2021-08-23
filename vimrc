@@ -158,3 +158,30 @@ set grepprg=ack " Recherche avec ack, une alternative de grep (https://beyondgre
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 noremap <C-S-/> :NERDCommenterToggle<CR>
+
+" --------------------------------------------
+" vim-javascript (via vim-polyglot)
+" --------------------------------------------
+let g:javascript_plugin_jsdoc = 1 "  Enables syntax highlighting for JSDocs. Default Value: 0
+
+" You can customize concealing characters, if your font provides the glyph you want, by defining one or more of the following variables:
+let g:javascript_conceal_function             = "ƒ"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_return               = "⇚"
+let g:javascript_conceal_undefined            = "¿"
+let g:javascript_conceal_NaN                  = "ℕ"
+let g:javascript_conceal_prototype            = "¶"
+let g:javascript_conceal_static               = "•"
+let g:javascript_conceal_super                = "Ω"
+let g:javascript_conceal_arrow_function       = "⇒"
+let g:javascript_conceal_noarg_arrow_function = "🞅"
+let g:javascript_conceal_underscore_arrow_function = "🞅"
+
+" You can enable concealing within VIM with:
+" set conceallevel=1
+
+" OR if you wish to toggle concealing you may wish to bind a command such as
+" the following which will map <LEADER>l (leader is usually the \ key but in $MYVIMRC it is 'space bar') to toggling conceal mode:
+map <leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
+" --------------------------------------------
