@@ -10,12 +10,28 @@ endif
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
+" ---------------------------
 
-" Make sure you use single quotes
+" ---------------------------
 " https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
 Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
+" ---------------------------
 
+" ---------------------------
+" Markdown-preview.nvim
+" https://github.com/iamcco/markdown-preview.nvim
+" If you have nodejs and yarn
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+" If you don't have nodejs and yarn
+" use pre build, add 'vim-plug' to the filetype list so vim-plug can update this plugin
+" see: https://github.com/iamcco/markdown-preview.nvim/issues/50
+" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+" ---------------------------
+
+" ---------------------------
 " Initialize plugin system
+" ---------------------------
 call plug#end()
 "-----------------------vim-plug----END
 
