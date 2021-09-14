@@ -1,20 +1,20 @@
 "-----------------------vim-plug----BEGIN
 " Automatic installation of vim-Plug if not installed yet
 " https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~\vimfiles'
 if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  silent execute '!curl -fLo '.data_dir.'\autoload\plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/vimfiles/plugged')
 " ---------------------------
 
 " ---------------------------
 " https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
-Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
+" Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
 " ---------------------------
 
 " ---------------------------
@@ -43,7 +43,7 @@ set path+=**
 set wildmenu
 
 "-------- Settings for Ctrlp.vim (https://github.com/ctrlpvim/ctrlp.vim)
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=~/vimfiles/bundle/ctrlp.vim
 let g:ctrlp_working_path_mode = 'ra'
 " 'c' - the directory of the current file.
 " 'a' - the directory of the current file, unless it is a subdirectory of the cwd
@@ -130,7 +130,7 @@ set smartcase
 set smartindent
 
 set noswapfile
-set undodir=~/.vim/undodir
+set undodir=~/vimfiles/undodir
 set undofile
 
 set encoding=utf-8 "encode le fichier courant en utf-8
@@ -143,7 +143,7 @@ set fileencoding=utf-8 "encode le fichier courant en utf-8 au moment de l'enregi
 set hlsearch "met en surbrillance les résultats de recherche
 set incsearch "active la recherche incrémentale par défaut
 let mapleader=" " "ajoute la barre d'espace comme touche leader dans le but d'éviter les conflits
-map <leader>s :source ~/.vim/vimrc<CR> " recharge vimrc pour l'appliquer à la session vim active
+map <leader>s :source ~/vimfiles/vimrc<CR> " recharge vimrc pour l'appliquer à la session vim active
 nnoremap <Leader><Leader> :e#<CR>  " bascule sur le dernier buffer affiché
 autocmd BufWritePre * :%s/\s\+$//e "supprime les espaces inutiles à la fin de chaque ligne
 
@@ -160,13 +160,13 @@ let g:ale_sign_warning = '⚠️'
 highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 " Allow ALE to run fixers to format the code in a Vim buffer
-let g:ale_fixers['javascript'] = ['eslint']
+" let g:ale_fixers['javascript'] = ['eslint']
 
 " Fix files automatically on save
-let g:ale_fix_on_save = 1
+" let g:ale_fix_on_save = 1
 " -------------------------------------------
 " -------------------------------------------
-set grepprg=ack " Recherche avec ack, une alternative de grep (https://beyondgrep.com/)
+" set grepprg=ack " Recherche avec ack, une alternative de grep (https://beyondgrep.com/)
 
 " -------------------------------------------
 "  NERDCommenter settings
