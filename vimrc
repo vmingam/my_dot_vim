@@ -16,7 +16,9 @@ call plug#begin('~/.vim/plugged')
 " https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
 Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
 " ---------------------------
-
+Plug 'sainnhe/sonokai'
+" ---------------------------
+Plug 'sheerun/vim-polyglot'
 " ---------------------------
 " Markdown-preview.nvim
 " https://github.com/iamcco/markdown-preview.nvim
@@ -76,6 +78,18 @@ nmap <leader>t :NERDTreeFind<CR>
 nmap <C-b> :NERDTreeToggle<CR>
 "-------------NERDTree command and option -----------------END
 
+"------------Netrw: vim native directory browser ------BEGIN
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+augroup ProjectDrawer
+    autocmd!
+      autocmd VimEnter * :Vexplore
+    augroup END
+"------------Netrw: vim native directory browser ------BEGIN
+"
 " ---------Options for vim-multiple-cursors---BEGIN
 let g:multi_cursor_use_default_mapping=0
 
@@ -104,10 +118,11 @@ let g:syntastic_check_on_wq = 0
 " ---------Options for syntastic---END
 
 "----------------- Miscellaneous personal options------------------
-
+nnoremap <silent><c-s> :<c-u>:update<c-r>
 set mouse=a "active la souris par défaut
 "
-colorscheme monokai
+colorscheme sonokai
+"colorscheme monokai
 "colorscheme Tomorrow-Night
 "colorscheme gruvbox
 set bg=dark
@@ -155,8 +170,8 @@ let g:vim_markdown_folding_disabled = 1
 " -------------------------------------------
 " Option for ALE (Asynchronous Lint Engine)
 " -------------------------------------------
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '⚠️'
+let g:ale_sign_error = 'x'
+let g:ale_sign_warning = '!'
 highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 " Allow ALE to run fixers to format the code in a Vim buffer
