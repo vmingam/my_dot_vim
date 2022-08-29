@@ -2,3 +2,4 @@ undodir
 view
 plugged/
 autoload/plug.vim
+.DS_Store

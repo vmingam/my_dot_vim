@@ -175,7 +175,7 @@ let g:ale_sign_warning = '!'
 highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 " Allow ALE to run fixers to format the code in a Vim buffer
-let g:ale_fixers['javascript'] = ['eslint']
+" let g:ale_fixers['javascript'] = ['eslint']
 
 " Fix files automatically on save
 let g:ale_fix_on_save = 1
